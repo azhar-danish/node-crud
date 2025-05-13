@@ -1,6 +1,6 @@
 require('dotenv').config();
 const mongoConnect = require('./database/db');
-const cache = require('./cache/redis');
+// const cache = require('./cache/redis');
 const express = require('express');
 const cors = require('cors');
 const app = express();
@@ -8,7 +8,7 @@ const app = express();
 mongoConnect();
 
 //cache
-global.cache = cache;
+// global.cache = cache;
 
 //middleware
 app.use(cors({origin:"http://localhost:8081"}));
